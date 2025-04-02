@@ -10,6 +10,17 @@
 .greetingsText {
   font-weight: 600;
   font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 1%;
+  border: 0.5 solid purple;
+}
+
+/* Container */
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
 }
 
 @keyframes logo-spin {
