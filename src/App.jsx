@@ -1,23 +1,18 @@
-import { useState } from "react";
 import "./App.css";
+import {
+  MessageContainerLeft,
+  MessageContainerRight,
+} from "./container/MessageContainer/MessageContainer";
+import FrontContainer from "./container/FrontContainer/FrontContainer";
 
 function App() {
   return (
     <>
-      <div>
-        <div className="heartPicture"></div>
-        <div className="textContainer">
-          <p className="greetingsText" id="greetingsText1">
-            {/* Happy */}
-          </p>
-          <p className="greetingsText" id="greetingsText2">
-            {/* Birthday, */}
-          </p>
-        </div>
-        <p className="heartName">Heart Ryan!</p>
+      <div className="containerBox">
+        <MessageContainerLeft />
+        <FrontContainer />
+        <MessageContainerRight />
       </div>
-      <div className="confettiDesign" id="confettiLeft"></div>
-      <div className="confettiDesign" id="confettiRight"></div>
     </>
   );
 }
