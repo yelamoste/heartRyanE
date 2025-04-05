@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./ReactionButton.css";
 
 export function ReactionButton() {
-  const outlineHeart = "/src/assets/outlineHeart.png";
-  const fullHeart = "/src/assets/fullHeart.png";
+  const outlineHeart = "/outlineHeart.png";
+  const fullHeart = "/fullHeart.png";
 
   const [likes, setLike] = useState("Like");
   const [images, setImages] = useState(outlineHeart);
