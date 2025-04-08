@@ -49,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 
-@media (prefers-color-scheme: light) {
+@media only screen and (prefers-color-scheme: light) and (max-width: 600px) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -59,5 +59,8 @@ button {
   }
   button {
     background-color: #f9f9f9;
+  }
+  body {
+    overflow-y: scroll;
   }
 }

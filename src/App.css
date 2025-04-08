@@ -24,8 +24,10 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media only screen and (max-width: 600px) {
+  .containerBox {
+    flex-direction: column;
+    height: 360vh;
+    overflow-y: scroll;
   }
 }

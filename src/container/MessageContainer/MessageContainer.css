@@ -7,3 +7,9 @@
   justify-content: center;
   /* background-color: rgb(34, 122, 199); */
 }
+@media only screen and (max-width: 600px) {
+  .messageDesign {
+    width: 100%;
+    height: 40%;
+  }
+}
