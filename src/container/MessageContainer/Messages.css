@@ -93,8 +93,8 @@
 }
 @media only screen and (max-width: 400px) {
   .messageContainer {
-    width: 80%;
-    height: 35%;
-    border-radius: 14px;
+    width: 100%;
+    height: 40%;
+    border-radius: 12px;
   }
 }
