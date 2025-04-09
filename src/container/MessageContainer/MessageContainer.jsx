@@ -13,7 +13,9 @@ export function Messages(props) {
   return (
     <div className="messageContainer">
       <div className="nameContainer">
-        <img className="imageContainer" src={image} />
+        <div className="imageContainer">
+          <img className="imageContent" src={image} />
+        </div>
         <div className="nameAlignment">
           <p className="nameMessage">{name}</p>
           <p className="dateTime">{time}</p>

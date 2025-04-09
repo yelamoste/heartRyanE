@@ -25,15 +25,22 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  /* align-items: center; */
+  align-items: center;
   margin: 15px 15px 0 15px;
   width: 90%;
-  height: 50px;
+  height: 40%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .imageContainer {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageContent {
   height: 50px;
   width: 50px;
   border-radius: 50% 50%;
@@ -49,6 +56,8 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+/* Text */
 .nameMessage {
   line-height: 0;
   font-weight: 500;
@@ -63,7 +72,7 @@
   text-align: justify;
   padding: 10px;
   margin: 0px 15px 15px 15px;
-  height: 30%;
+  height: 40%;
 }
 .reactionContainer {
   display: flex;
@@ -71,7 +80,7 @@
 }
 @media only screen and (max-width: 1000px) {
   .messageContainer {
-    width: 80%;
+    width: 85%;
     height: 35%;
     border-radius: 20px;
   }
@@ -86,9 +95,15 @@
 }
 @media only screen and (max-width: 600px) {
   .messageContainer {
-    width: 90%;
+    width: 95%;
     height: 30%;
     border-radius: 16px;
+  }
+  .nameMessage {
+    font-weight: 600;
+  }
+  .dateTime {
+    font-size: 0.6rem;
   }
 }
 @media only screen and (max-width: 400px) {
