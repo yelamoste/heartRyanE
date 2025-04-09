@@ -29,7 +29,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 300px;
+  min-width: 320px;
   height: 100vh;
   overflow: hidden;
 }
@@ -61,8 +61,9 @@ button {
     background-color: #f9f9f9;
   }
 }
-@media only screen and (max-width: 800px) {
-  body {
+@media only screen and (max-width: 1000px) {
+  body,
+  html {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 360vh;

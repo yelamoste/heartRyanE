@@ -7,17 +7,27 @@
   justify-content: center;
   /* background-color: rgb(34, 122, 199); */
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .messageDesign {
     width: 100%;
     height: 40%;
     justify-content: space-around;
   }
 }
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 800px) {
   .messageDesign {
-    width: 100%;
     height: 30%;
-    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .messageDesign {
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .messageDesign {
+    height: 30%;
   }
 }
