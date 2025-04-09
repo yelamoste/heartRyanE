@@ -26,6 +26,24 @@
 }
 /* Text */
 
+/* Responsiveness */
+@media only screen and (max-width: 800px) {
+  .containerBox {
+    flex-direction: column;
+    /* height: 360vh; */
+    display: flex;
+  }
+  .frontCont {
+    height: 100vh;
+  }
+  .msgCont {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250vh;
+    position: relative;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .containerBox {
     flex-direction: column;
