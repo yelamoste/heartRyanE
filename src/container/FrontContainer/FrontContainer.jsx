@@ -8,14 +8,14 @@ const FrontContainer = () => {
         <img src="" alt="" className="heartImage" />
       </div>
       <div className="textContainer">
-        {/* <p className="greetingsText" id="greetingsText1">
+        <p className="greetingsText" id="greetingsText1">
           Happy
         </p>
         <p className="greetingsText" id="greetingsText2">
           Birthday,
-        </p> */}
+        </p>
       </div>
-      {/* <p className="heartName">Heart Ryan!</p> */}
+      <p className="heartName">Heart Ryan!</p>
     </div>
   );
 };

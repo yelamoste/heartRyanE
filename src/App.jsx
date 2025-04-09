@@ -11,8 +11,12 @@ function App() {
     <>
       <ParticlesComponent />
       <div className="containerBox">
-        <MessageContainerLeft />
-        <FrontContainer />
+        <div className="frontCont">
+          <FrontContainer />
+        </div>
+      </div>
+      <div className="msgCont">
+        <MessageContainerLeft className="messageContainerLeft" />
         <MessageContainerRight />
       </div>
     </>

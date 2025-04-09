@@ -5,29 +5,40 @@
   text-align: center;
 }
 /* Main Container */
-
-.containerBox {
+.msgCont {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
   display: flex;
   height: 90vh;
   width: 90vw;
+  justify-content: space-between;
+}
+
+.frontCont,
+.containerBox {
+  position: relative;
+  display: flex;
+  height: 90vh;
+  width: 90vw;
+  justify-content: center;
   /* background-color: aqua; */
 }
-
 /* Text */
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media only screen and (max-width: 600px) {
   .containerBox {
     flex-direction: column;
-    height: 360vh;
-    overflow-y: scroll;
+    /* height: 360vh; */
+    display: flex;
+  }
+  .frontCont {
+    height: 100vh;
+  }
+  .msgCont {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250vh;
+    position: relative;
   }
 }
