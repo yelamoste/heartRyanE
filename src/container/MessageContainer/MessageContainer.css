@@ -1,20 +1,19 @@
 .messageDesign {
   display: flex;
-  height: 100%;
+  height: max-content;
   width: 30%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* background-color: rgb(34, 122, 199); */
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .messageDesign {
     width: 100%;
-    height: 40%;
     justify-content: space-around;
   }
 }
-
+/* 
 @media only screen and (max-width: 800px) {
   .messageDesign {
     height: 30%;
@@ -25,4 +24,4 @@
   .messageDesign {
     height: 30%;
   }
-}
+} */

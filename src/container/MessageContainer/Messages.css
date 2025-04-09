@@ -5,7 +5,7 @@
 .messageContainer {
   display: flex;
   width: 80%;
-  height: 35%;
+  height: max-content;
   background-color: aliceblue;
   border-radius: 12px;
   margin: 2%;
@@ -26,25 +26,28 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 15px 15px 0 15px;
-  width: 90%;
-  height: 40%;
-  overflow: hidden;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  height: max-content;
+  /* overflow: hidden; */
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .imageContainer {
-  width: 20%;
-  height: 100%;
+  width: max-content;
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 .imageContent {
   height: 50px;
   width: 50px;
-  border-radius: 50% 50%;
-  background-color: aqua;
+  border-radius: 50%;
+  background-color: rgb(233, 208, 233);
+  padding: 0.5px;
+  border: none;
 }
 .nameAlignment {
   margin: 10px;
@@ -55,6 +58,12 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.reactionContainer {
+  display: flex;
+  height: 20%;
+  align-items: center;
+  margin: 10px;
 }
 
 /* Text */
@@ -72,16 +81,15 @@
   text-align: justify;
   padding: 10px;
   margin: 0px 15px 15px 15px;
-  height: 40%;
-}
-.reactionContainer {
+  height: max-content;
+  width: 85%;
   display: flex;
-  height: 20%;
+  overflow: visible;
+  text-wrap: wrap;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .messageContainer {
     width: 85%;
-    height: 35%;
     border-radius: 20px;
   }
 }
@@ -89,14 +97,12 @@
 @media only screen and (max-width: 800px) {
   .messageContainer {
     width: 90%;
-    height: 40%;
     border-radius: 18px;
   }
 }
 @media only screen and (max-width: 600px) {
   .messageContainer {
     width: 95%;
-    height: 30%;
     border-radius: 16px;
   }
   .nameMessage {
@@ -109,7 +115,6 @@
 @media only screen and (max-width: 400px) {
   .messageContainer {
     width: 100%;
-    height: 40%;
     border-radius: 12px;
   }
 }
