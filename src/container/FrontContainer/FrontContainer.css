@@ -9,6 +9,11 @@
   justify-content: flex-end;
 }
 
+.heartPicture {
+  height: 50%;
+  width: 100%;
+}
+
 /* Text */
 
 .greetingsText {
@@ -50,6 +55,6 @@
 @media only screen and (max-width: 1000px) {
   .frontContainer {
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
 }
