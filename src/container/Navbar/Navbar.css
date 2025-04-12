@@ -1,0 +1,39 @@
+.navbarContainer {
+  display: flex;
+  height: 6vh;
+  width: 50vw;
+  background-color: #aa3891;
+  position: fixed;
+  top: 1px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  z-index: 3;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  border: 1px solid #eca4dd;
+}
+@media only screen and (max-width: 1200px) {
+  .navbarContainer {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .navbarContainer {
+    width: 80vw;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbarContainer {
+    width: 80vw;
+    font-size: 0.68rem;
+    height: 5vh;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .navbarContainer {
+    font-size: 0.65rem;
+    height: 5.5vh;
+  }
+}

@@ -4,45 +4,8 @@
   padding: 2rem;
   text-align: center;
 }
-/* Main Container */
-.msgCont {
-  position: absolute;
-  z-index: 1;
-  top: 5%;
+.mainContainer {
   display: flex;
-  height: 90vh;
-  width: 90vw;
-  justify-content: space-between;
-}
-
-.frontCont,
-.containerBox {
-  position: relative;
-  display: flex;
-  height: 90vh;
-  width: 90vw;
-  justify-content: center;
-  /* background-color: aqua; */
-}
-/* Text */
-
-/* Responsiveness */
-@media only screen and (max-width: 1200px) {
-  #root {
-    padding: 0%;
-  }
-  .containerBox {
-    flex-direction: column;
-    /* height: 360vh; */
-    display: flex;
-  }
-  .frontCont {
-    height: 100vh;
-  }
-  .msgCont {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 250vh;
-    position: relative;
-  }
+  flex-direction: column;
+  align-items: center;
 }
