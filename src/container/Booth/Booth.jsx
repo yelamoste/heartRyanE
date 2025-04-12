@@ -25,6 +25,7 @@ function Booth() {
         <div className="frameContainer"></div>
         <div className="cameraContainer">
           <Webcam
+            className="webCam"
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"

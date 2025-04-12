@@ -22,6 +22,7 @@
   height: 30%;
   border: 2px solid #000;
   position: absolute;
+  background-color: #14000cb0;
   z-index: 1;
 }
 .btnCapture {
@@ -31,4 +32,38 @@
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
   border: 2px solid white;
+}
+.webCam {
+  background-color: #303030;
+  height: 95%;
+  width: 75%;
+}
+@media only screen and (max-width: 1200px) {
+  .boothContainer {
+    flex-direction: column;
+  }
+  .frameContainer {
+    width: 100%;
+    height: 20%;
+  }
+  .cameraContainer {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .webCam {
+    height: 100%;
+    width: 100%;
+  }
+  .btnCapture {
+    height: 20%;
+    width: 30%;
+    border-radius: 50px;
+  }
+  #imgCaptured {
+    width: 50%;
+    height: 25%;
+  }
 }
