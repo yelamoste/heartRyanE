@@ -5,12 +5,13 @@ import Webcam from "react-webcam";
 const videoConstraints = {
   width: 1080,
   height: 1080,
-  aspectRatio: 1,
+  aspectRatio: 1.777777778,
   facingMode: "user",
 };
 
 function Booth() {
   const [captured, setCaptured] = useState("");
+  const btnText = "SMILE :)";
   const webcamRef = React.useRef(null);
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
@@ -32,7 +33,9 @@ function Booth() {
             mirrored={true}
           />
 
-          <button onClick={capture}>Capture photo</button>
+          <button onClick={capture} className="btnCapture">
+            {btnText}
+          </button>
         </div>
         <img src={captured} id="imgCaptured" />
       </div>
