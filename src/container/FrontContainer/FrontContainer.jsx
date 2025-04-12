@@ -2,10 +2,11 @@ import React from "react";
 import "./FrontContainer.css";
 
 const FrontContainer = () => {
+  const heartImg = "/heartImage.png";
   return (
     <div className="frontContainer">
       <div className="heartPicture">
-        <img src="" alt="" className="heartImage" />
+        <img src={heartImg} alt="" className="heartImage" />
       </div>
       <div className="textContainer">
         <p className="greetingsText" id="greetingsText1">
