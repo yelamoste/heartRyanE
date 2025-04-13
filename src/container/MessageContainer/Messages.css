@@ -27,7 +27,8 @@
   flex-direction: column;
   font-size: 0.9rem;
   box-shadow: 2px 4px 20px #00000052;
-
+  align-items: center;
+  align-content: center;
   justify-content: space-around;
 }
 .messageContainer:hover {
@@ -36,7 +37,7 @@
 .nameContainer {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin: 10px 0 0px 0;
   width: 100%;
@@ -44,6 +45,8 @@
   /* overflow: hidden; */
   white-space: nowrap;
   text-overflow: ellipsis;
+  align-content: center;
+  align-items: center;
 }
 .imageContainer {
   width: max-content;
