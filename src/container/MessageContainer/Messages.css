@@ -51,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 10px 0px 10px 15px;
 }
 .imageContent {
   height: 50px;
@@ -62,7 +62,7 @@
   border: none;
 }
 .nameAlignment {
-  margin: 10px;
+  margin: 0px 20px 0px 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
