@@ -38,7 +38,9 @@ function Booth() {
             {btnText}
           </button>
         </div>
-        <img src={captured} id="imgCaptured" />
+        <div className="frameImage">
+          <img src={captured} id="imgCaptured" />
+        </div>
       </div>
     </>
   );

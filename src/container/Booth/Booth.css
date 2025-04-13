@@ -26,18 +26,23 @@
   z-index: 1;
 }
 .btnCapture {
-  background-color: #e00c81;
-  color: white;
-  font-weight: 600;
+  color: rgb(255, 255, 255);
   border-radius: 20px;
-  padding: 5px 10px 5px 10px;
-  border: 2px solid white;
+  padding: 10px;
+  width: 40%;
+  height: 40px;
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
 }
 .webCam {
   background-color: #303030;
   height: 95%;
   width: 75%;
 }
+/* frame */
+
 @media only screen and (max-width: 1200px) {
   .boothContainer {
     flex-direction: column;

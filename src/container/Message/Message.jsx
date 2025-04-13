@@ -1,6 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Message.css";
 
-export const Message = () => {
-  return <div>Message</div>;
+const message = {
+  image: "",
+  name: "",
+  time: "",
+  content: "",
+  likes: true,
 };
+
+export const Message = () => {
+  const [messageInfo, setMessageinfo] = useState(message);
+
+  return (
+    <>
+      <div className="messageMaincont">
+        <div className="messageDisplaycont">
+          <div className="textDisplaytmp">
+            {messageInfo.name}
+            <br></br>
+            {messageInfo.content}
+          </div>
+        </div>
+        <div className="messageForm">
+          <form className="formMessage">
+            <input
+              type="file"
+              id="profileImage"
+              name="image"
+              className="inputProfile"
+              accept="image/*"
+            />
+            <div className="userNamecont">
+              <label for="userName">Username:</label>
+              <input
+                type="text"
+                id="userName"
+                name="name"
+                className="inputName"
+                minLength={5}
+                maxLength={20}
+                required
+                placeholder="Username"
+                value={messageInfo.name}
+                onChange={(e) =>
+                  setMessageinfo({ ...messageInfo, name: e.target.value })
+                }
+              />
+            </div>
+            <textarea
+              name="content"
+              className="inputContent"
+              minLength={5}
+              maxLength={255}
+              placeholder="Say your 'Hi' to Hearty."
+              value={messageInfo.content}
+              onChange={(e) =>
+                setMessageinfo({
+                  ...messageInfo,
+                  content: e.currentTarget.value,
+                })
+              }
+            />
+
+            <button>Send</button>
+          </form>
+        </div>
+      </div>
+    </>
+  );
+};
+
+// const messageDup = {
+//   profileImage: "",
+//   name: "Employee",
+//   message: "34",
+//   time: "",
+//   isLiked: false,
+// };
+// const messageDup3 = {
+//   profileImage: "",
+//   name: "Non-existent",
+//   message: "56",
+//   time: "",
+//   isLiked: true,
+// };
+
+// const [info, setInfo] = useState("");
+
+// {messageInfo.name} <br></br>
+// {info}
+// <br></br>
+// {messageInfo.message}
+// <br></br>
+// <input
+// type="text"
+// value={info}
+// onChange={(e) => setInfo(e.currentTarget.value)}
+// />
+
+// info == "a"
+// ? setMessageinfo(message)
+// : info == "b"
+// ? setMessageinfo(messageDup)
+// : setMessageinfo(messageDup3)
+
+// <input
+//         type="text"
+//         placeholder="name"
+//         value={messageInfo.name}
+//         onChange={(e) =>
+//           setMessageinfo({ ...messageInfo, name: e.currentTarget.value })
+//         }
+//       />
