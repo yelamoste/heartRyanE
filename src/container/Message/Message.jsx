@@ -11,6 +11,18 @@ const message = {
 
 export const Message = () => {
   const [messageInfo, setMessageinfo] = useState(message);
+  const [image, setImage] = useState(null);
+
+  const handleClick = () => {
+    document.getElementById("fileInput").click();
+  };
+
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImage(URL.createObjectURL(file));
+    }
+  };
 
   return (
     <>
@@ -26,13 +38,22 @@ export const Message = () => {
           <form className="formMessage">
             <input
               type="file"
-              id="profileImage"
+              id="fileInput"
               name="image"
               className="inputProfile"
+              style={{ display: "none" }}
               accept="image/*"
+              onChange={handleChange}
             />
+            <div
+              className="inputProfile"
+              style={{ backgroundImage: image ? `url(${image})` : "none" }}
+              onClick={handleClick}
+            >
+              {!image && <span>Click to upload</span>}
+            </div>
             <div className="userNamecont">
-              <label for="userName">Username:</label>
+              <label for="userName">Message for Hearty</label>
               <input
                 type="text"
                 id="userName"
