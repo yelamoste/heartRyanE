@@ -9,19 +9,16 @@ const message = {
   likes: true,
 };
 
-export const Message = () => {
+export function Message() {
   const [messageInfo, setMessageinfo] = useState(message);
   const [image, setImage] = useState(null);
 
-  const handleClick = () => {
-    document.getElementById("fileInput").click();
+  const handleChange = (e) => {
+    setInfo(e.currentTarget.value);
   };
 
-  const handleChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setImage(URL.createObjectURL(file));
-    }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -35,7 +32,7 @@ export const Message = () => {
           </div>
         </div>
         <div className="messageForm">
-          <form className="formMessage">
+          <form className="formMessage" onSubmit={handleSubmit}>
             <input
               type="file"
               id="fileInput"
@@ -48,9 +45,9 @@ export const Message = () => {
             <div
               className="inputProfile"
               style={{ backgroundImage: image ? `url(${image})` : "none" }}
-              onClick={handleClick}
+              onClick={(e) => setImage(e.currentTarget)}
             >
-              {!image && <span>Click to upload</span>}
+              {!image && <span></span>}
             </div>
             <div className="userNamecont">
               <label for="userName">Message for Hearty</label>
@@ -61,7 +58,7 @@ export const Message = () => {
                 className="inputName"
                 minLength={5}
                 maxLength={20}
-                required
+                required="true"
                 placeholder="Username"
                 value={messageInfo.name}
                 onChange={(e) =>
@@ -84,13 +81,13 @@ export const Message = () => {
               }
             />
 
-            <button>Send</button>
+            <button type="submit">Send</button>
           </form>
         </div>
       </div>
     </>
   );
-};
+}
 
 // const messageDup = {
 //   profileImage: "",

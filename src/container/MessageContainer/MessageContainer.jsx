@@ -1,4 +1,3 @@
-import React from "react";
 import "./MessageContainer.css";
 import "./Messages.css";
 import { ReactionButton } from "./ReactionButton/ReactionButton";
@@ -31,30 +30,30 @@ export function Messages(props) {
 
 export function MessageContainerLeft() {
   return (
-    <div className="messageDesign">
-      <Messages
-        className="messageHover"
-        details={{
-          image: "/heartryanefc.jpg",
-          time: "10:00 PM",
-          name: "HeartBeatsOFCalsdaksjdlaksjdlasjdkasjdlakjsdlaksjdlkajsldkajsdlkajldkj",
-          content:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-        }}
-      />
-      <Messages
-        className="messageHover"
-        details={{
-          image: "",
-          time: "5:00 PM",
-          name: "Darcel",
-          content: "hello",
-        }}
-      />
-    </div>
+    <>
+      <div className="messageDesign">
+        <Messages
+          className="messageHover"
+          details={{
+            image: "/heartryanefc.jpg",
+            time: "10:10",
+            name: "HeartBeatsOFC",
+            content: "dasdaasdasdASsdasdasdasdasdasdasdasdadDASD",
+          }}
+        />
+        <Messages
+          className="messageHover"
+          details={{
+            image: "",
+            time: "5:00 PM",
+            name: "Darcel",
+            content: "hello",
+          }}
+        />
+      </div>
+    </>
   );
 }
-
 export function MessageContainerRight() {
   return (
     <div className="messageDesign">
