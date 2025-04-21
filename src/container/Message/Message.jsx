@@ -14,7 +14,7 @@ export function Message() {
   const [image, setImage] = useState(null);
 
   const handleChange = (e) => {
-    setInfo(e.currentTarget.value);
+    setImage(e.currentTarget.value);
   };
 
   const handleSubmit = async (e) => {

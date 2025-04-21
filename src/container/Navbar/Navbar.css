@@ -1,7 +1,7 @@
 .navbarContainer {
   display: flex;
   height: 6vh;
-  width: 50vw;
+  width: 20vw;
   background-color: #aa3891;
   position: fixed;
   top: 1px;
@@ -19,18 +19,18 @@
 }
 @media only screen and (max-width: 1200px) {
   .navbarContainer {
-    width: 70vw;
+    width: 50vw;
   }
 }
 @media only screen and (max-width: 800px) {
   .navbarContainer {
-    width: 80vw;
+    width: 60vw;
     font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 600px) {
   .navbarContainer {
-    width: 80vw;
+    width: 50vw;
     font-size: 0.68rem;
     height: 5vh;
   }

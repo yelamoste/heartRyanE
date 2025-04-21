@@ -11,12 +11,12 @@ const Navbar = () => {
       <Link to="/hearty" style={{ color: "white" }}>
         HeartRyan
       </Link>
-      <Link to="/booth" style={{ color: "white" }}>
+      {/* <Link to="/booth" style={{ color: "white" }}>
         Booth
       </Link>
       <Link to="/messages" style={{ color: "white" }}>
         Messages
-      </Link>
+      </Link> */}
     </div>
   );
 };
