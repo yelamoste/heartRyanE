@@ -30,6 +30,7 @@
     flex-direction: column;
     /* height: 360vh; */
     display: flex;
+    margin-top: 30px;
   }
   .frontCont {
     height: 100vh;
@@ -37,7 +38,7 @@
   .msgCont {
     flex-direction: column;
     justify-content: flex-start;
-    height: 250vh;
+    height: 100vh;
     position: relative;
   }
 }

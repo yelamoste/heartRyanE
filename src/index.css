@@ -66,6 +66,7 @@ button {
   body,
   html {
     overflow-x: hidden;
-    height: 360vh;
+    height: 250vh;
+    flex-direction: column;
   }
 }
