@@ -7,15 +7,84 @@
 .gallerySection {
   width: 50%;
   height: 100%;
+  display: flex;
+}
+.briefInfo {
+  flex-direction: column;
+}
+.navBtn {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.miniNavigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #df36c2;
+  color: white;
+  border-radius: 50px 5px;
+  margin: 0;
+}
+.detailsCont {
+  height: 100%;
+}
+.contSection {
+  margin: 10px;
+  background: #df36c2;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 10px;
+}
+.galleryContainer {
+  margin: 10px;
+  background: #ffffff;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.rowContainer {
+  /* margin: 10px; */
+  height: 100%;
+  width: 100%;
+  /* background: #ac08d4; */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.pictureContainerRectangle,
+.pictureContainerSquare {
+  margin: 5px;
+  background: #c00f85;
+  border-radius: 10px;
+  width: calc(100% - 10px);
+}
+.pictureContainerRectangle {
+  height: calc(67% - 10px);
+}
+.pictureContainerSquare {
+  height: calc(34% - 10px);
+}
+
+.pictureContainerRectangle:hover,
+.pictureContainerSquare:hover {
+  filter: contrast(105%);
+  filter: brightness(105%);
+  filter: hue-rotate(150%);
 }
 
 @media only screen and (max-width: 1200px) {
   .aboutContainer {
     flex-direction: column-reverse;
+    height: 250vh;
+    margin-top: 30px;
+    justify-content: center;
   }
   .gallerySection,
   .briefInfo {
     width: 100%;
-    height: 50%;
+    height: 45%;
   }
 }

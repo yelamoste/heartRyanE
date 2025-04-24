@@ -115,12 +115,11 @@
   padding: 0px 5px 15px 15px;
   margin: 0px 5px 5px 5px;
   height: 80%;
-  width: 85%;
+  width: calc(100% - 30px);
   display: flex;
-  overflow: visible;
-  text-wrap: wrap;
-  overflow-y: overlay;
-  overflow-x: hidden;
+  /* text-wrap: pretty; */
+  word-wrap: break-word;
+  word-break: break-all;
 }
 @media only screen and (max-width: 1200px) {
   .messageContainer {

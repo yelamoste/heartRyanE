@@ -3,12 +3,14 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const linkStyle = { color: "white" };
+
   return (
     <div className="navbarContainer">
-      <Link to="/" style={{ color: "white" }}>
+      <Link to="/" style={linkStyle} className="linkDesign">
         Home
       </Link>
-      <Link to="/hearty" style={{ color: "white" }}>
+      <Link to="/hearty" style={linkStyle} className="linkDesign">
         HeartRyan
       </Link>
       {/* <Link to="/booth" style={{ color: "white" }}>

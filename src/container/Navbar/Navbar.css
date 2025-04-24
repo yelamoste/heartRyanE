@@ -1,3 +1,6 @@
+.linkDesign:hover {
+  font-size: 1.01rem;
+}
 .navbarContainer {
   display: flex;
   height: 6vh;
