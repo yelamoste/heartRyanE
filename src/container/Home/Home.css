@@ -34,6 +34,7 @@
   }
   .frontCont {
     height: 100vh;
+    margin-top: 15%;
   }
   .msgCont {
     flex-direction: column;

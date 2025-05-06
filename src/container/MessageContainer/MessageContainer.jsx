@@ -35,10 +35,10 @@ export function MessageContainerLeft() {
         <Messages
           className="messageHover"
           details={{
-            image: "/heartryanefc.jpg",
+            image: "/heartryanefc.webp",
             time: "10:10",
             name: "HeartBeatsOFC",
-            content: "dasdaasdasdASsdasdasdasdasdasdasdasdadDASD",
+            content: "Happy Birthday Hearty <3",
           }}
         />
         <Messages

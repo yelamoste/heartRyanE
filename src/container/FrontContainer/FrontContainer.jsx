@@ -2,7 +2,7 @@ import React from "react";
 import "./FrontContainer.css";
 
 const FrontContainer = () => {
-  const heartImg = "/heartImage.png";
+  const heartImg = "/hreImage.png";
   return (
     <div className="frontContainer">
       <div className="heartPicture">
