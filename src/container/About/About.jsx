@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import "./About.css";
 function About() {
   const [changeButton, setChangeButton] = useState("Page1");
+
   const style1 = () => {
     return changeButton == "Page1"
       ? { backgroundColor: "#df36c2 ", color: "white" }
@@ -51,47 +53,6 @@ function About() {
           <div className="detailsCont">
             <div className="contSection">
               <MiniNav changeBtn={changeButton} />
-            </div>
-          </div>
-        </div>
-        <div className="gallerySection">
-          <div className="galleryContainer">
-            <div className="rowContainer">
-              <img
-                src="./hre/left-rectangle.webp"
-                className="pictureContainerRectangle"
-                id="rectanglePicture"
-              />
-              <img
-                src="./hre/left-square.webp"
-                className="pictureContainerSquare"
-                id="squareOne"
-              />
-            </div>
-            <div className="rowContainer">
-              <img
-                src="./hre/top-square.webp"
-                className="pictureContainerSquare"
-                id="squareTwo"
-              />
-              <img
-                src="./hre/mid-square.webp"
-                className="pictureContainerSquare"
-              />
-              <img
-                src="./hre/bottom-square.webp"
-                className="pictureContainerSquare"
-              />
-            </div>
-            <div className="rowContainer">
-              <img
-                src="./hre/right-square.webp"
-                className="pictureContainerSquare"
-              />
-              <img
-                src="./hre/right-rectangle.webp"
-                className="pictureContainerRectangle"
-              />
             </div>
           </div>
         </div>

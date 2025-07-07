@@ -28,6 +28,7 @@ export function Messages(props) {
   );
 }
 
+const defaultImage = "/user.webp";
 export function MessageContainerLeft() {
   return (
     <>
@@ -35,7 +36,7 @@ export function MessageContainerLeft() {
         <Messages
           className="messageHover"
           details={{
-            image: "/heartryanefc.webp",
+            image: defaultImage,
             time: "10:10",
             name: "HeartBeatsOFC",
             content: "Happy Birthday Hearty <3",
@@ -44,7 +45,7 @@ export function MessageContainerLeft() {
         <Messages
           className="messageHover"
           details={{
-            image: "",
+            image: defaultImage,
             time: "5:00 PM",
             name: "Darcel",
             content: "hello",
@@ -60,7 +61,7 @@ export function MessageContainerRight() {
       <Messages
         className="messageHover"
         details={{
-          image: "",
+          image: defaultImage,
           time: "",
           name: "Awiticisizism",
           content: "call me baby",
@@ -69,7 +70,7 @@ export function MessageContainerRight() {
       <Messages
         className="messageHover"
         details={{
-          image: "",
+          image: defaultImage,
           time: "",
           name: "holasoydora",
           content: "cringe",

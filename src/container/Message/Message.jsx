@@ -1,24 +1,18 @@
 import React, { useState } from "react";
 import "./Message.css";
-
-const message = {
-  image: "",
-  name: "",
-  time: "",
-  content: "",
-  likes: true,
-};
+import db from ".././firebase.js";
+import { doc, setDoc } from "firebase/firestore";
 
 export function Message() {
   const [messageInfo, setMessageinfo] = useState(message);
-  const [image, setImage] = useState(null);
-
-  const handleChange = (e) => {
-    setImage(e.currentTarget.value);
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    await setDoc(doc(db, "messages", "cities"), {
+      name: "Hehehe",
+      content: "Awit lovely",
+      likes: true,
+    });
   };
 
   return (
@@ -33,22 +27,6 @@ export function Message() {
         </div>
         <div className="messageForm">
           <form className="formMessage" onSubmit={handleSubmit}>
-            <input
-              type="file"
-              id="fileInput"
-              name="image"
-              className="inputProfile"
-              style={{ display: "none" }}
-              accept="image/*"
-              onChange={handleChange}
-            />
-            <div
-              className="inputProfile"
-              style={{ backgroundImage: image ? `url(${image})` : "none" }}
-              onClick={(e) => setImage(e.currentTarget)}
-            >
-              {!image && <span></span>}
-            </div>
             <div className="userNamecont">
               <label for="userName">Message for Hearty</label>
               <input

@@ -12,6 +12,7 @@
   "dependencies": {
     "@tsparticles/all": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
+    "firebase": "^11.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-particles": "^2.12.2",
