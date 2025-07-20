@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from ".././firebase.js";
-const Login = () => {
+import SendAMessage from "../SendAMessage/SendAMessage.jsx";
+const Login = ({ inputs }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [alertText, setAlertText] = useState();
+  const [sendMessage, setSendMessage] = useState(false);
+
+  console.log(inputs);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -13,8 +18,10 @@ const Login = () => {
       window.location.href = "/home";
     } catch (error) {
       console.log(error.message);
+      setAlertText("Input valid credentials.");
     }
   };
+
   return (
     <div className="logIn">
       <div className="logInContainer">
@@ -39,10 +46,20 @@ const Login = () => {
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
+            <span className="alertSpan">{alertText}</span>
             <button className="submit">Submit</button>
           </div>
         </form>
       </div>
+      <button
+        className="sendMessageToHeart"
+        onClick={() => setSendMessage(true)}
+      >
+        Send a message to heart!
+      </button>
+      {sendMessage && (
+        <SendAMessage inputs={inputs} display={() => setSendMessage(false)} />
+      )}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { auth } from "../firebase";
 
 import "./About.css";
 function About() {
@@ -19,6 +20,15 @@ function About() {
       ? { backgroundColor: "#df36c2", color: "white" }
       : {};
   };
+  async function handleLogout() {
+    try {
+      await auth.signOut();
+      window.location.href = "/login";
+      console.log("User logged out successfully!");
+    } catch (error) {
+      "Error logging out:", error.message;
+    }
+  }
 
   return (
     <>
@@ -56,6 +66,8 @@ function About() {
             </div>
           </div>
         </div>
+        <button onClick={handleLogout}>Logout</button>
+        <div className=""></div>
       </div>
     </>
   );

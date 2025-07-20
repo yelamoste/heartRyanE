@@ -1,0 +1,10 @@
+.mainCont {
+  position: absolute;
+  background: #df36c2;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+}

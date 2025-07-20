@@ -1,14 +1,18 @@
 import "./MessageContainer.css";
 import "./Messages.css";
-import { ReactionButton } from "./ReactionButton/ReactionButton";
+import { useState } from "react";
 
-export function Messages(props) {
-  const details = props.details;
-  const name = details.name;
-  const content = details.content;
-  const image = details.image;
-  const time = details.time;
+const MessageContainer = ({ name, content, image, time }) => {
+  const outlineHeart = "/outlineHeart.webp";
+  const fullHeart = "/fullHeart.webp";
 
+  const [likes, setLike] = useState("Like");
+  const [images, setImages] = useState(outlineHeart);
+  const handleReaction = () => {
+    likes === "Like"
+      ? setLike("Liked") && setImages(fullHeart)
+      : setLike("Like") && setImages(outlineHeart);
+  };
   return (
     <div className="messageContainer">
       <div className="nameContainer">
@@ -20,62 +24,22 @@ export function Messages(props) {
           <p className="dateTime">{time}</p>
         </div>
       </div>
+
       <p className="contentMessage">{content}</p>
       <div className="reactionContainer">
-        <ReactionButton />
-      </div>
-    </div>
-  );
-}
+        <div className="reactContainer">
+          <img
+            className="likeReact"
+            alt="Like React"
+            src={images}
+            onClick={handleReaction}
+          />
 
-const defaultImage = "/user.webp";
-export function MessageContainerLeft() {
-  return (
-    <>
-      <div className="messageDesign">
-        <Messages
-          className="messageHover"
-          details={{
-            image: defaultImage,
-            time: "10:10",
-            name: "HeartBeatsOFC",
-            content: "Happy Birthday Hearty <3",
-          }}
-        />
-        <Messages
-          className="messageHover"
-          details={{
-            image: defaultImage,
-            time: "5:00 PM",
-            name: "Darcel",
-            content: "hello",
-          }}
-        />
+          <p className="likeIdentifier">{likes}</p>
+        </div>
       </div>
-    </>
-  );
-}
-export function MessageContainerRight() {
-  return (
-    <div className="messageDesign">
-      <Messages
-        className="messageHover"
-        details={{
-          image: defaultImage,
-          time: "",
-          name: "Awiticisizism",
-          content: "call me baby",
-        }}
-      />
-      <Messages
-        className="messageHover"
-        details={{
-          image: defaultImage,
-          time: "",
-          name: "holasoydora",
-          content: "cringe",
-        }}
-      />
     </div>
   );
-}
+};
+
+export default MessageContainer;

@@ -22,18 +22,18 @@ const Navbar = () => {
             <Link to="/home" style={linkStyle} className="linkDesign">
               Home
             </Link>
-            <Link to="/hearty" style={linkStyle} className="linkDesign">
-              HeartRyan
-            </Link>
             {/* <Link to="/booth" style={{ color: "white" }}>
               Booth
-            </Link>
-            <Link to="/messages" style={{ color: "white" }}>
+              </Link>
+              <Link to="/messages" style={{ color: "white" }}>
               Messages
-            </Link> */}
+              </Link> */}
             <Link to="/messageboard" style={{ color: "white" }}>
               Message Board
             </Link>{" "}
+            <Link to="/hearty" style={linkStyle} className="linkDesign">
+              HeartRyan
+            </Link>
           </div>
         </>
       ) : null}

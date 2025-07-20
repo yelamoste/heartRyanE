@@ -11,6 +11,8 @@ import MessageBoard from "./container/MessageBoard/MessageBoard";
 import { auth } from "./container/firebase";
 import { useState, useEffect } from "react";
 import Login from "./container/Login/Login";
+import SendAMessage from "./container/SendAMessage/SendAMessage";
+
 function App() {
   const [user, setUser] = useState();
 
@@ -29,6 +31,7 @@ function App() {
             path="/"
             element={user ? <Navigate to="/login" /> : <Login />}
           />
+          <Route path="/sendAMsg" element={<SendAMessage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/hearty" element={<About />} />
